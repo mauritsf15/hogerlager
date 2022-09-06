@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/main.css">
+    <title>Higher Lower</title>
+</head>
+<body>
+    <div class="maindiv">
+        <h2>Higher Lower</h2>
+        <div class="numbers">
+            <div class="numberDivs">
+                <div class="numberBox">
+                    <span id="computerNumberOne"></span>
+                </div>
+                <div class="numberBox">
+                    <span id="computerNumberTwo"></span>
+                </div>
+                <div>
+                    <p>Computer <span id="computerTotal"></span></p>
+                </div>
+            </div>
+            <p class="inline">&nbsp;&nbsp;</p>
+            <div class="numberDivs">
+                <div class="numberBox">
+                    <span id="clientNumberOne"></span>
+                </div>
+                <div class="numberBox">
+                    <span id="clientNumberTwo"></span>
+                </div>
+                <div>
+                    <p>You <span id="clientTotal"></span></p>
+                </div>
+            </div>
+        </div>
+        <div id="rollComputer">
+            <button onclick="rollComputer()">Roll Computer Dice</button>
+        </div>
+        <div id="rollClient" class="inputs">
+            <p class="stats">
+                <form onsubmit="rollClient(); return false;">
+                    Stakes: <input id="stakes" type="number" placeholder="50" required><br>
+                    <input type="radio" id="higher" value="higher" name="choice">
+                    <label for="higher">Higher</label><br>
+                    <input type="radio" id="lower" value="lower" name="choice" >
+                    <label for="lower">Lower</label><br><br>
+                    <button>Roll your dice!</button>
+                </form>
+            </p>
+        </div>
+        <div id="resultsDiv">
+            <h2 id="result"></h2><br><br>
+            <button onclick="replay()">Play again!</button>
+        </div>
+        <div id="stats">
+            <br><br>Bank: <span id="bank">0</span>$<br>
+            Wins: <span id="wins">0</span><br>
+            Win Amount: <span id="winAmount">0</span>$<br>
+            Losses: <span id="losses">0</span><br>
+            Loss Amount: <span id="lossAmount">0</span>$<br>
+        </div>
+    </div>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

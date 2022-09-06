@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.maindiv {
+    margin: auto;
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.stats {
+    font-size: larger;
+}
+
+.numberBox {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    padding: 25px;
+    margin: 25px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 45px;
+}
+
+.numberDivs{
+    display: inline-block;
+}
+
+.inline {
+    display: inline-block;
+}
