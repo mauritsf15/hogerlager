@@ -30,6 +30,7 @@ function updateStats() {
     document.getElementById("winAmount").innerHTML = winAmount
     document.getElementById("losses").innerHTML = losses
     document.getElementById("lossAmount").innerHTML = lossAmount
+    document.getElementById("stakes").setAttribute('max', bank)
 }
 
 updateStats()
