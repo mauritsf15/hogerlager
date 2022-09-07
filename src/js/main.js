@@ -44,7 +44,7 @@ function rollComputer() {
     computerTotal = computerNumberOne + computerNumberTwo
     document.querySelector("#computerNumberOne").innerHTML = computerNumberOne
     document.querySelector("#computerNumberTwo").innerHTML = computerNumberTwo
-    document.querySelector("#computerTotal").innerHTML = computerTotal
+    document.querySelector("#computerTotal").innerHTML = `(Total: ${computerTotal})`
     computerDiv.style.display = "none";
     clientDiv.style.display = "block";
 }
@@ -60,7 +60,7 @@ function rollClient() {
     clientTotal = clientNumberOne + clientNumberTwo
     document.querySelector("#clientNumberOne").innerHTML = clientNumberOne
     document.querySelector("#clientNumberTwo").innerHTML = clientNumberTwo
-    document.querySelector("#clientTotal").innerHTML = clientTotal
+    document.querySelector("#clientTotal").innerHTML = `(Total: ${clientTotal})`
     if (computerTotal > clientTotal && choice == "higher" || clientTotal > computerTotal && choice == "lower" || clientTotal != computerTotal && choice == "tie") {
         bank -= stakes
         losses += 1
