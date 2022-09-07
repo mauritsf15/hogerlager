@@ -13,9 +13,9 @@ let winAmount = 0;
 let losses = 0;
 let lossAmount = 0;
 let choice;
-const clientDiv = document.getElementById("rollClient");
-const computerDiv = document.getElementById("rollComputer");
-const resultsDiv = document.getElementById("resultsDiv");
+const clientDiv = document.querySelector("#rollClient");
+const computerDiv = document.querySelector("#rollComputer");
+const resultsDiv = document.querySelector("#resultsDiv");
 
 // Hide client division
 
@@ -25,12 +25,12 @@ resultsDiv.style.display = "none"
 // Update Stats
 
 function updateStats() {
-    document.getElementById("bank").innerHTML = bank
-    document.getElementById("wins").innerHTML = wins
-    document.getElementById("winAmount").innerHTML = winAmount
-    document.getElementById("losses").innerHTML = losses
-    document.getElementById("lossAmount").innerHTML = lossAmount
-    document.getElementById("stakes").setAttribute('max', bank)
+    document.querySelector("#bank").innerHTML = bank
+    document.querySelector("#wins").innerHTML = wins
+    document.querySelector("#winAmount").innerHTML = winAmount
+    document.querySelector("#losses").innerHTML = losses
+    document.querySelector("#lossAmount").innerHTML = lossAmount
+    document.querySelector("#stakes").setAttribute('max', bank)
 }
 
 updateStats()
@@ -42,9 +42,9 @@ function rollComputer() {
     computerNumberOne = Math.floor(Math.random() * 6) + 1
     computerNumberTwo = Math.floor(Math.random() * 6) + 1
     computerTotal = computerNumberOne + computerNumberTwo
-    document.getElementById("computerNumberOne").innerHTML = computerNumberOne
-    document.getElementById("computerNumberTwo").innerHTML = computerNumberTwo
-    document.getElementById("computerTotal").innerHTML = computerTotal
+    document.querySelector("#computerNumberOne").innerHTML = computerNumberOne
+    document.querySelector("#computerNumberTwo").innerHTML = computerNumberTwo
+    document.querySelector("#computerTotal").innerHTML = computerTotal
     computerDiv.style.display = "none";
     clientDiv.style.display = "block";
 }
@@ -58,21 +58,21 @@ function rollClient() {
     clientNumberOne = Math.floor(Math.random() * 6) + 1
     clientNumberTwo = Math.floor(Math.random() * 6) + 1
     clientTotal = clientNumberOne + clientNumberTwo
-    document.getElementById("clientNumberOne").innerHTML = clientNumberOne
-    document.getElementById("clientNumberTwo").innerHTML = clientNumberTwo
-    document.getElementById("clientTotal").innerHTML = clientTotal
+    document.querySelector("#clientNumberOne").innerHTML = clientNumberOne
+    document.querySelector("#clientNumberTwo").innerHTML = clientNumberTwo
+    document.querySelector("#clientTotal").innerHTML = clientTotal
     if (computerTotal > clientTotal && choice == "higher" || clientTotal > computerTotal && choice == "lower") {
         bank -= stakes
         losses += 1
         lossAmount += stakes
-        document.getElementById("result").innerHTML = "You lost!"
+        document.querySelector("#result").innerHTML = "You lost!"
     } else if (computerTotal > clientTotal && choice == "lower" || clientTotal > computerTotal && choice == "higher") {
         bank += stakes
         wins += 1
         winAmount += stakes
-        document.getElementById("result").innerHTML = "You won!"
+        document.querySelector("#result").innerHTML = "You won!"
     } else {
-        document.getElementById("result").innerHTML = "It's a tie!"
+        document.querySelector("#result").innerHTML = "It's a tie!"
     }
     resultsDiv.style.display = "block"
     clientDiv.style.display = "none"
@@ -82,10 +82,10 @@ function rollClient() {
 function replay() {
     resultsDiv.style.display = "none"
     computerDiv.style.display = "block"
-    document.getElementById("computerNumberOne").innerHTML = ""
-    document.getElementById("computerNumberTwo").innerHTML = ""
-    document.getElementById("computerTotal").innerHTML = ""
-    document.getElementById("clientNumberOne").innerHTML = ""
-    document.getElementById("clientNumberTwo").innerHTML = ""
-    document.getElementById("clientTotal").innerHTML = ""
+    document.querySelector("#computerNumberOne").innerHTML = ""
+    document.querySelector("#computerNumberTwo").innerHTML = ""
+    document.querySelector("#computerTotal").innerHTML = ""
+    document.querySelector("#clientNumberOne").innerHTML = ""
+    document.querySelector("#clientNumberTwo").innerHTML = ""
+    document.querySelector("#clientTotal").innerHTML = ""
 }
