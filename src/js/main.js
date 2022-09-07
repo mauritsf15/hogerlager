@@ -13,9 +13,9 @@ let winAmount = 0;
 let losses = 0;
 let lossAmount = 0;
 let choice;
-let clientDiv = document.getElementById("rollClient");
-let computerDiv = document.getElementById("rollComputer");
-let resultsDiv = document.getElementById("resultsDiv");
+const clientDiv = document.getElementById("rollClient");
+const computerDiv = document.getElementById("rollComputer");
+const resultsDiv = document.getElementById("resultsDiv");
 
 // Hide client division
 
