@@ -61,7 +61,7 @@ function rollClient() {
     document.querySelector("#clientNumberOne").innerHTML = clientNumberOne
     document.querySelector("#clientNumberTwo").innerHTML = clientNumberTwo
     document.querySelector("#clientTotal").innerHTML = clientTotal
-    if (computerTotal > clientTotal && choice == "higher" || clientTotal > computerTotal && choice == "lower") {
+    if (computerTotal > clientTotal && choice == "higher" || clientTotal > computerTotal && choice == "lower" || clientTotal != computerTotal && choice == "tie") {
         bank -= stakes
         losses += 1
         lossAmount += stakes
@@ -71,8 +71,13 @@ function rollClient() {
         wins += 1
         winAmount += stakes
         document.querySelector("#result").innerHTML = "You won!"
+    } else if (computerTotal == clientTotal && choice == "tie") {
+        bank += stakes * 10
+        wins += 1
+        winAmount += stakes * 10
+        document.querySelector("#result").innerHTML = "You won!"
     } else {
-        document.querySelector("#result").innerHTML = "It's a tie!"
+        document.querySelector("#result").innerHTML = "Hmmm... something went wrong!"
     }
     resultsDiv.style.display = "block"
     clientDiv.style.display = "none"
