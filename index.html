@@ -36,25 +36,23 @@
             </div>
         </div>
         <div id="rollComputer">
-            <button onclick="rollComputer()">Roll Computer Dice</button>
+            <button class="rollComputerBtn">Roll Computer Dice</button>
         </div>
         <div id="rollClient" class="inputs">
-            <p class="stats">
-                <form onsubmit="rollClient(); return false;">
-                    Stakes: <input id="stakes" type="number" placeholder="50" min="1" max="100" required><br>
-                    <input type="radio" id="higher" value="higher" name="choice" required>
-                    <label for="higher">Higher</label><br>
-                    <input type="radio" id="lower" value="lower" name="choice" >
-                    <label for="lower">Lower</label><br>
-                    <input type="radio" id="tie" value="tie" name="choice" >
-                    <label for="lower">TIE! (x11)</label><br><br>
-                    <button>Roll your dice!</button>
-                </form>
+            <p>
+                Stakes: <input id="stakes" type="number" placeholder="50" min="1" max="100" required><br>
+                <input type="radio" id="higher" value="higher" name="choice" required>
+                <label for="higher">Higher</label><br>
+                <input type="radio" id="lower" value="lower" name="choice">
+                <label for="lower">Lower</label><br>
+                <input type="radio" id="tie" value="tie" name="choice">
+                <label for="lower">TIE! (x11)</label><br><br>
+                <button class="rollClientBtn">Roll your dice!</button>
             </p>
         </div>
         <div id="resultsDiv">
             <h2 id="result"></h2><br><br>
-            <button onclick="replay()">Play again!</button>
+            <button class="replayBtn">Play again!</button>
         </div>
         <div id="stats">
             <br><br>Bank: $<span id="bank">0</span><br>

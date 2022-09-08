@@ -17,6 +17,29 @@ const clientDiv = document.querySelector("#rollClient");
 const computerDiv = document.querySelector("#rollComputer");
 const resultsDiv = document.querySelector("#resultsDiv");
 
+const rollClientBtn = document.querySelector('.rollClientBtn');
+if (rollClientBtn) {
+    rollClientBtn.addEventListener('click', clientBtnClick)
+}
+
+const rollComputerBtn = document.querySelector('.rollComputerBtn');
+if (rollComputerBtn) {
+    rollComputerBtn.addEventListener('click', rollComputer)
+}
+
+const replayBtn = document.querySelector('.replayBtn');
+if (replayBtn) {
+    replayBtn.addEventListener('click', replay)
+}
+
+// Checking validity of form
+
+function clientBtnClick() {
+    if (document.querySelector("#stakes").reportValidity() && document.querySelector("#higher").reportValidity()) {
+        rollClient();
+    }
+}
+
 // Hide client division
 
 clientDiv.style.display = "none"
