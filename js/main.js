@@ -84,7 +84,7 @@ function rollClient() {
     document.querySelector("#clientNumberOne").innerHTML = clientNumberOne
     document.querySelector("#clientNumberTwo").innerHTML = clientNumberTwo
     document.querySelector("#clientTotal").innerHTML = `(Total: ${clientTotal})`
-    if (computerTotal > clientTotal && choice == "higher" || clientTotal > computerTotal && choice == "lower" || clientTotal != computerTotal && choice == "tie") {
+    if (computerTotal > clientTotal && choice == "higher" || clientTotal > computerTotal && choice == "lower" || clientTotal != computerTotal && choice == "tie" || clientTotal == computerTotal && choice !="tie") {
         bank -= stakes
         losses += 1
         lossAmount += stakes
